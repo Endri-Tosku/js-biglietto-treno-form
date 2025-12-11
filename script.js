@@ -2,18 +2,30 @@
 
 // SELEZIONE DEI CAMPI
 const fieldName = document.getElementById('name');
-const fieldKm = document.getElementById('km')
-const fieldEta = document.getElementById('eta')
-const button = document.querySelector('button');
+const fieldKm = document.getElementById('km');
+const fieldEta = document.getElementById('eta');
+const mioForm = document.getElementById('myForm');
+const output = document.querySelector('.output');
 
+// EVENTO AL SUBMIT DEL FORM
+mioForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // evita il refresh della pagina
 
-button.addEventListener('click', () => {
-    let nomeUser = fieldName.value;
-    let kmUser = fieldKm.value
-    let etaUser = fieldEta.value
+    // RACCOLTA DEI VALORI
+    const nomeUser = fieldName.value;
+    const kmUser = parseFloat(fieldKm.value);
+    const etaUser = parseFloat(fieldEta.value);
     console.log(nomeUser, kmUser, etaUser);
 
-})
+    // OUTPUT
+    output.innerText = `Nome: ${nomeUser}, Km: ${kmUser}, Età: ${etaUser}`;
+
+    // PULIZIA DEI CAMPI
+    fieldName.value = "";
+    fieldKm.value = "";
+    fieldEta.value = "";
+});
+
 
 
 
