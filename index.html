@@ -6,16 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <form id="myForm" action="#">
+
+    <form id="myForm" class="row g-3" action="#">
+        <div class="col-md-4">
+            <label for="name" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="name" placeholder="Inserisci il tuo nome">
+        </div>
+
+        <div class="col-md-4">
+            <label for="km" class="form-label">Km</label>
+            <input type="text" class="form-control" id="km" placeholder="Inserisci i km">
+        </div>
+
+        <div class="col-md-4">
+            <label for="eta" class="form-label">Fascia d'età</label>
+            <select id="eta" class="form-select">
+                <option value="Maggiorenne">Maggiorenne</option>
+                <option value="Minorenne">Minorenne</option>
+                <option value="Senior">Senior</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary genera">Genera</button>
+            <button type="button" class="btn btn-secondary annulla">Annulla</button>
+        </div>
+        <div class="output"></div>
+    </form>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!--     <form id="myForm" action="#">
 
         <label for="name">Nome Completo</label>
         <input id="name" placeholder="Inserisci il tuo nome">
 
-        <label for="km">Km</label> 
+        <label for="km">Km</label>
         <input id="km" placeholder="Inserisci i km">
 
         <label for="eta">Età</label>
@@ -27,10 +64,4 @@
 
         </p>
 
-    </form>
-
-
-    <script src="./script.js"></script>
-</body>
-
-</html>
+    </form> -->
